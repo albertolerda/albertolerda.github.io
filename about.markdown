@@ -5,7 +5,7 @@ permalink: /about/
 ---
 
 # Hi &#128075;, I'm Alberto
-I'm a *Full-Stack software developer* with a strong interest in security topics, expecially, regarding applications of *cryptography*.
+I'm a *Full-Stack software developer* with a strong interest in security topics, especially, regarding applications of *cryptography*.
 
 I've a Master's degree in Mathematics, curriculum *Cryptography and Coding Theory*, and an high-school diploma as a *computer technician*. This course of studies offered me both *practical and theoretical abilities* in front of *real-world problems*.
 

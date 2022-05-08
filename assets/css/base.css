@@ -1,8 +1,10 @@
+html, body {
+  height: 100%;
+}
 body {
   font-family: 'Roboto', sans-serif;
   max-width: 1512px;
   margin: auto;
-  padding: 1cm;
   font-size: large;
 }
 a {
@@ -18,9 +20,17 @@ a:hover, .a-focused {
   display: inline-block;
   padding: 0.2cm;
 }
+#wrapper {
+  margin: 0;
+  min-height: 100%;
+}
+header {
+  padding: 1cm;
+}
 main {
   margin: auto;
   max-width: 1024px;
+  padding-bottom: 50px;
 }
 /*nav {
   display: flex;
@@ -38,9 +48,7 @@ main {
 footer {
   font-size: small;
   text-align: center;
-  position:fixed;
-  bottom:0px;
-  width:100%;
+  margin-top: -50px;
 }
 
 #my-img {

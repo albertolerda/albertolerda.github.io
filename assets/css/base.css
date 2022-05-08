@@ -1,0 +1,54 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  max-width: 1512px;
+  margin: auto;
+  padding: 1cm;
+  font-size: large;
+}
+a {
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+}
+a:hover, .a-focused {
+  font-weight: bold;
+  text-decoration: underline;
+}
+.menu-item {
+  display: inline-block;
+  padding: 0.2cm;
+}
+main {
+  margin: auto;
+  max-width: 1024px;
+}
+/*nav {
+  display: flex;
+  justify-content: space-between;
+}*/
+#right-menu {
+  float: right;
+}
+
+#left-menu {
+  display: inline-block;
+  text-align: left;
+}
+
+footer {
+  font-size: small;
+  text-align: center;
+  position:fixed;
+  bottom:0px;
+  width:100%;
+}
+
+#my-img {
+  width: 294px;
+  height: 294px;
+  border-radius: 50%;
+}
+
+#main-front {
+  text-align: center;
+}

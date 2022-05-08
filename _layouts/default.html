@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+    <meta name="description" content="{{ page.description }}" />
+    {% feed_meta %}
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?">
+    <link rel="stylesheet" href="/assets/css/base.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+  </head>
+  <body>
+      <header>
+        {% include navigation.html %}
+      </header>
+
+      <main>
+        {{ content }}
+      </main>
+
+      <footer>
+        <p>Site <b>coded</b> with <span style="color: red;">&#9829;</span> by me. Copyright &copy; Alberto Lerda 2022 - P.IVA 03981300043</p>
+      </footer>
+  </body>
+ </html>

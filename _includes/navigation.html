@@ -1,0 +1,12 @@
+<nav>
+  <div id="left-menu">
+    <a class="menu-item {% if page.url == "/" %}a-focused{% endif %}" href="/">
+      Alberto Lerda</a>
+  </div>
+  <div id="right-menu">
+    {% for item in site.data.navigation %}
+      <a class="menu-item {% if page.url == item.link %}a-focused{% endif %}"
+         href="{{ item.link }}">{{ item.name }}</a>
+    {% endfor %}
+  </div>
+</nav>

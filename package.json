@@ -14,5 +14,5 @@
     "particlesjs": "^2.2.3",
     "zod": "^3.22.4"
   },
-  "packageManager": "^pnpm@8.9.1"
+  "packageManager": "pnpm@8.9.1"
 }

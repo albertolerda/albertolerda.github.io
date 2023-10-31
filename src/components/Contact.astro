@@ -1,0 +1,59 @@
+---
+import Github from '../components/social_icons/Github.astro'
+import Youtube from '../components/social_icons/Youtube.astro'
+import Linkedin from '../components/social_icons/Linkedin.astro'
+---
+<div class="content">
+    <h1>Get in touch with me on</h1>
+    <div class="socials">
+      <div class="social">
+        <Github /><a target="_blank" href="https://github.com/albertolerda"
+          >GitHub</a
+        >
+      </div>
+      <div class="social">
+        <Linkedin /><a
+          target="_blank"
+          href="https://www.linkedin.com/in/alberto-lerda-158934122"
+          >Linkedin</a
+        >
+      </div>
+      <div class="social">
+        <Youtube /><a
+          target="_blank"
+          href="https://www.youtube.com/@alblerda"
+          >YouTube</a
+        >
+      </div>
+    </div>
+  </div>
+  <style is:global>
+    .fill-black {
+        fill: #5465ff;
+    }
+  </style>
+  <style>
+    .socials {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    .social {
+        margin: 1em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .social a {
+        padding: 0.5em;
+    }
+
+    a {
+        color: #5465ff;
+    }
+    h1 {
+        text-align: center;
+        color: #423e3b
+    }
+  </style>

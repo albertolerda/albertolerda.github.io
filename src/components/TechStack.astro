@@ -1,0 +1,121 @@
+---
+const techStacks = [
+    {
+        name: "Ops",
+        techs: [
+            {
+                "name": "Linux",
+                "rating": 5
+            },
+            {
+                "name": "Ansible",
+                "rating": 4
+            },
+            {
+                "name": "CI (Github Actions)",
+                "rating": 4
+            },
+            {
+                "name": "Docker",
+                "rating": 4
+            },
+        ],
+    },
+    {
+        name: "Dev (backend)",
+        techs: [
+            {
+                "name": "Python/Django",
+                "rating": 5
+            },
+            {
+                "name": "Golang/Pocketbase",
+                "rating": 4
+            },
+            {
+                "name": "Typescript/Express",
+                "rating": 3
+            },
+            {
+                "name": "Elixir/Plug",
+                "rating": 2
+            },
+            {
+                "name": "PostgreSQL",
+                "rating": 4
+            },
+        ],
+    },
+    {
+        name: "Dev (frontend)",
+        techs: [
+            {
+                "name": "JQuery",
+                "rating": 5
+            },
+            {
+                "name": "React.js",
+                "rating": 4
+            },
+            {
+                "name": "Svelte",
+                "rating": 2
+            },
+        ]
+    }
+]
+---
+<section id="techStack">
+    <h2>Tech stack used in industry</h2>
+    <div id="cards">
+        {techStacks.map(stack =>
+            <article>
+                <h3>{stack.name}</h3>
+                <table>
+                    {stack.techs.map(tech =>
+                        <tr>
+                            <td>{tech.name}</td>
+                            <td><span class="gold">{"★".repeat(tech.rating)}</span><span>{"★".repeat(5-tech.rating)}</span></td>
+                        </tr>
+                    )}
+                </table>
+            </article>
+        )}
+    </div>
+</section>
+
+<style>
+    h2 {
+        text-align: center;
+    }
+    h3 {
+        color: #ff934f;
+    }
+    section {
+        padding: 1em 0;
+        color: #eeeeee;
+        background-color: #423e3b;
+        margin: auto;
+    }
+    #cards {
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #cards article {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        min-width: 400px;
+        justify-content: center;
+        align-items: center;
+    }
+    li {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    .gold {
+        color: gold;
+    }
+</style>

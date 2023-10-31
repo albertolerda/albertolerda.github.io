@@ -1,0 +1,22 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Home from '../components/Home.astro';
+import About from '../components/About.astro';
+import Contact from '../components/Contact.astro';
+---
+
+<Layout>
+	<Home/>
+	<About/>
+	<Contact/>
+</Layout>
+
+<style is:global>
+	a {
+        color: #ff934f;
+        text-decoration: none;
+	}
+	.highlight {
+		color: #5465ff;
+	}
+</style>

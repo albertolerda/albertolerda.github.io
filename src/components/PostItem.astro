@@ -1,0 +1,57 @@
+---
+const { item } = Astro.props;
+
+function formatDate(date: string) {
+  const options: Intl.DateTimeFormatOptions = {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  }
+
+  const dateObject = typeof date === 'string' ? new Date(date) : date
+  const formattedDate = dateObject.toLocaleDateString('en-US', options)
+  return addDaySuffix(formattedDate)
+}
+
+function addDaySuffix(date: string) {
+  const day = parseInt(date.split(' ')[1], 10)
+  const suffix = getDaySuffix(day)
+  return date.replace(/\b\d+\b/, `${day}${suffix}`)
+}
+
+function getDaySuffix(day: number) {
+  if (day >= 11 && day <= 13) {
+    return 'th'
+  }
+  switch (day % 10) {
+    case 1:
+      return 'st'
+    case 2:
+      return 'nd'
+    case 3:
+      return 'rd'
+    default:
+      return 'th'
+  }
+}
+---
+<a href={`/blog/${item.slug}`}>
+        <span>{formatDate(item.slug.substring(0, 10))}</span>
+        <h3>{item.data.title}</h3>
+        <p>{item.data.abstract}</p>
+</a>
+
+<style>
+        a {
+                color: #423e3b;
+                text-decoration: none;
+                display: block;
+                margin-bottom: 1em;
+	}
+        h3 {
+                margin: 0;
+        }
+        p {
+                margin: 0;
+        }
+</style>

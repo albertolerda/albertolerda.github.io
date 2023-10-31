@@ -1,0 +1,40 @@
+---
+import Nav from '../components/Nav.astro';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Alberto Lerda - Software Engineer</title>
+	</head>
+	<body>
+		<Nav/>
+    	<div id="filler"></div>
+		<slot />
+	</body>
+	<footer>
+		<p>Site <b>coded</b> with <span style="color: red;">&#9829;</span> by me. Copyright &copy; Alberto Lerda 2022-2023, P.IVA 03981300043</p>
+	</footer>
+</html>
+<style>
+    #filler {
+        background-color: #423e3b;
+		width: 100vw;
+        height: 1.5em;
+    }
+	html, body {
+		scroll-behavior: smooth;
+		font-family: Inter, sans-serif;
+		color: #423e3b;
+		margin: 0;
+		padding: 0;
+	}
+	footer {
+		text-align: center;
+	}
+</style>

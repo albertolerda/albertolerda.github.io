@@ -1,0 +1,17 @@
+{
+  "name": "albertolerda",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "astro": "^3.3.0",
+    "particlesjs": "^2.2.3",
+    "zod": "^3.22.4"
+  }
+}

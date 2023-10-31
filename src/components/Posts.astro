@@ -1,0 +1,27 @@
+---
+import { getCollection } from 'astro:content';
+import PostItem from './PostItem.astro';
+const blogEntries = await getCollection('blog');
+---
+<section>
+    <h1>Blog posts</h1>
+    <ul>
+        {blogEntries.map(blogPostEntry => (
+            <li>
+                <PostItem item={ blogPostEntry } />
+            </li>
+        ))}
+    </ul>
+</section>
+<style>
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    section {
+        padding: 1em;
+        margin: auto;
+        max-width: 1024px;
+    }
+</style>

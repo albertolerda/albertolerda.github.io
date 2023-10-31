@@ -1,0 +1,101 @@
+---
+const links = [
+    {
+        "name": "About",
+        "link": "/#about"
+    },
+    {
+        "name": "Blog",
+        "link": "/blog"
+    },
+]
+
+---
+<div id="wrapper" class="fixed">
+    <nav id="topnav">
+        <div id="left-menu">
+            <a class="menu-item" href="/">
+                Alberto Lerda</a>
+        </div>
+        <div id="right-menu">
+            {links.map((data) => 
+                <a class="menu-item"
+                    href={ data.link }>{ data.name }</a>
+            )}
+            <a href="javascript:void(0);" class="menu-item icon" onclick="toggleResponsive()"">X</a>
+        </div>
+    </nav>
+    <div id="drop-down">
+        {links.map((data) => 
+            <a href={ data.link }>{ data.name }</a>
+        )}
+    </div>
+</div>
+
+<script is:inline>
+function toggleResponsive() {
+    var x = document.getElementById("drop-down");
+    if (x.className === "") {
+        x.className += "responsive";
+    } else {
+        x.className = "";
+    }
+} 
+</script>
+<style>
+    nav {
+        height: 1.5em;
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+        background-color: #423e3b;
+        padding: 0 auto;
+    }
+    a {
+        text-decoration: none;
+        font-weight: bold;
+        color: #eeeeee;
+    }
+    a:hover, .a-focused {
+        font-weight: bold; 
+        text-decoration: underline;
+    }
+    .menu-item {
+        display: inline-block;
+        padding: 0.5em;
+    }
+    nav .icon {
+        display: none;
+    }
+
+    #drop-down a {
+        display: block;
+        background-color: #423e3b;
+        padding: 0.2cm;
+    }
+    #drop-down {
+        display: none;
+    }
+    #wrapper {
+        width: 100vw;
+    }
+    .fixed {
+        bottom: inherit;
+        position: fixed;
+        left: 0;
+        top: 0;
+    }
+
+    @media screen and (max-width: 600px) {
+        nav #right-menu a {display: none;}
+        nav #right-menu a.icon {
+            display: inline-block;
+        }
+    }
+
+@media screen and (max-width: 600px) {
+    #drop-down.responsive {
+    display: block;
+  }
+}
+</style>

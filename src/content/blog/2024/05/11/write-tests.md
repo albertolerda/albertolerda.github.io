@@ -35,7 +35,7 @@ You have written some code, you know how it works and you are able to move betwe
 
 Being a open source project or some work in a company, other people will have to interact with the code you have written. Test give more confidence to the user because he can see what impact has the code he is changing, but also for you. If the user add some code and new test, at least you know that the main feature still work and the code review will be much easier.
 
-## Catch error before the user
+## Catch errors before the user
 
 It is really bad to receive a call from a client telling you that the application doesn't work. Maybe it is not your fault, maybe it is due to some library update. The fact is that the code used to work and now it doesn't. The sooner you are aware of it, the sooner you can fix the problem.
 

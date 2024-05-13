@@ -1,11 +1,10 @@
 ---
-title: "5 Reasons why you should write tests"
+title: "5 Reasons Why You Should Write Tests"
 tags:
 - TDD
 abstract: |
   Tests play an essential role in producing high-quality and reliable software
 ---
-5 Reasons Why You Should Write Tests
 
 Tests and documentation, it is not always simple to find the time and the wish to write them. Nowadays, I usually don't apply the real TDD approach of seeing a test failing and then write the code to fix it. Nevertheless, if there is a test suite I add some test cases related to the code that I have changed.
 
